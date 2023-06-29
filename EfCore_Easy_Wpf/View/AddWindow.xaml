@@ -1,0 +1,25 @@
+﻿<Window x:Class="EfCore_Easy_Wpf.View.AddWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:EfCore_Easy_Wpf.View"
+        mc:Ignorable="d"
+        Title="AddWindow" Height="450" Width="800">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <StackPanel Grid.Row="0" Margin="10">
+            <TextBlock Text="Name:"/>
+            <TextBox Text="{Binding Name}" Width="200"/>
+        </StackPanel>
+
+        <StackPanel Grid.Row="1" Margin="10">
+            <Button Content="Save" Command="{Binding SaveCommand}" Width="100"/>
+            <Button Content="Cancel" Command="{Binding CancelCommand}" Width="100"/>
+        </StackPanel>
+    </Grid>
+</Window>
